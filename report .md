@@ -17,6 +17,8 @@
 ## 3. Задание
 
 25. Треугольник с вершинами в точках (-10,0),(0,10),(-10,20)
+![image](https://github.com/KirillLizunov/mai_python_laba/assets/75213389/b071f69f-471a-444e-bc6e-d993d722ee28)
+
 
 ## 4. Оборудование
 
