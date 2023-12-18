@@ -1,0 +1,84 @@
+0, ,<,back
+
+back,1,<,back
+back,0,<,back
+back, ,>,put!
+
+put!,1,!,go1
+put!,0,!,go0
+put!, ,>,gofinish
+
+go1,!,>,go1
+go1, ,>,put1
+go1,0,>,go1
+go1,1,>,go1
+
+put1, ,.,put10
+put1,.,>,put1
+put1,-,>,put1
+put1,0,>,put1
+put1,1,>,put1
+
+put10,.,>,put10
+put10,-,>,put10
+put10, ,-,put100
+
+put100,.,>,put100
+put100,-,>,put100
+put100, ,-,put1000
+
+put1000, ,-,put10000
+put1000,.,>,put1000
+put1000,-,>,put1000
+
+put10000, ,-,return1
+put10000,.,>,put10000
+put10000,-,>,put10000
+
+return1,!,1,right
+return1, ,<,return1
+return1,0,<,return1
+return1,1,<,return1
+return1,.,<,return1
+return1,-,<,return1
+
+go0,!,>,go0
+go0, ,>,put0
+go0,0,>,go0
+go0,1,>,go0
+
+put0, ,-,put10.
+put0,.,>,put0
+put0,-,>,put0
+
+put10.,.,>,put10.
+put10.,-,>,put10.
+put10., ,-,put100.
+
+put100.,.,>,put100.
+put100.,-,>,put100.
+put100., ,-,put1000.
+
+put1000., ,-,put10000.
+put1000.,.,>,put1000.
+put1000.,-,>,put1000.
+
+put10000., ,-,return0
+put10000.,.,>,put10000.
+put10000.,-,>,put10000.
+
+return0,!,0,right
+return0, ,<,return0
+return0,0,<,return0
+return0,1,<,return0
+return0,-,<,return0
+return0,.,<,return0
+
+right,1,>,put!
+right,0,>,put!
+
+gofinish,1,>,gofinish
+gofinish,0,>,gofinish
+gofinish,-,>,gofinish
+gofinish,.,>,gofinish
+gofinish, ,#,gofinish
